@@ -14,6 +14,10 @@ export default function SearchBar({ items, onItemSelected }) {
         setResults(items);
     }
 
+    function handleItemSelected(){
+        
+    }
+
     return (
         <div>
             {
@@ -22,7 +26,7 @@ export default function SearchBar({ items, onItemSelected }) {
             <input type="text" onChange={handleChange} value={query} />
             <Results
                 items={items}
-                onItemSelected={() => { }}
+                onItemSelected={handleItemSelected}
                 query={query}
                 onResultsCalculated={handleResults}
             />
